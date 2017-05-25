@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title></title>
+  </head>
+  <body>
+       <link rel="stylesheet" href="style.css">
+     
+
+	<div class="logo">
+	<img src="логотип банка.png" width="500" height="150" alt="Логотип банка">
+    </div>
+    
+      <div class="menu">
+		<a href="o banke.html">О банке</a>
+		<a href="kontakt inform.html">Контактная информация</a>
+    <a href="for life.html">Для жизни</a>
+    <a href="for business.html">Для бизнеса</a>
+      
+	</div>
+  
+  
+  	<div class="photo">
+    
+      <p><img src="forma.png" width="500" height="350"> </p>   
+ </div>  
+ 
+ 
+   <div class="description ">
+  
+
+<b>Ф.И.О.</b>  <br>
+<input type=text name="fio" size=55 maxlength=100><br><br>
+
+<b>Контактный телефон</b><br>
+<input type=text name="telefon" size=55 maxlength=100><br><br>
+
+<b>E-mail</b>      <br>
+<input type=text name="email" size=55 maxlength=100><br><br>
+
+<b>Город</b>  <br>
+<input type=text name="city" size=55 maxlength=100><br><br>
+
+<b>Тема</b>  <br>
+<select name="topic">
+<option value="1">Премиальное обслуживание
+<option value="2">Блокировка карты
+<option value="3">Операции по карте
+<option value="4">Кредиты (кредитные карты)
+<option value="5">Выписка по счету (карте)
+<option value="6">Реквизиты банка
+<option value="7"> Открытие счета (карты)
+<option value="8"> Услуги юридическим лицам
+<option value="9"> другое
+</select>
+<br><br>
+
+
+          	
+            
+        <p><input action="#" type="submit" value="Подать заявку"></p>
+        <p><a href="result.php">Получить результаты</a></p>
+        </div>
+  
+  
+  
+  </body>
+</html>
+<?php
+  //если нажата кнопка отправки, то 
+if (isset($_POST['submit']))
+{     
+//получаем данные из формы
+$fio = $_POST['fio'];
+$telefon = $_POST['telefon'];
+$email = $_POST['email'];
+$city = $_POST['city'];
+$topic = $_POST['topic'];
+$message = $_POST['message'];
+
+//подключаемся к базе данных
+//имя пользователя БД
+$dbuser = "root";
+//пароль пользователя БД
+$dbpassword = "";
+//имя БД
+$dbname = "selezneva";
+//поключаемся к БД
+$connect = mysqli_connect ("localhost", $dbuser, $dbpassword, $dbname) or die ("Ошибка подключения к MySQL базе данных");
+//делаем запрос к БД
+//запрос
+//выполняем запрос
+$doquery = mysqli_query ($connect, "INSERT INTO forma (fio,telefon,email,city,topic) VALUES ('{$fio}','{$telefon}','{$email}','{$city}','{$topic}')") or die ("Ошибка выполнения запроса");
+}
+
+echo "Данные отправлены";
+?>

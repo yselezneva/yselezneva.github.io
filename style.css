@@ -1,0 +1,96 @@
+
+
+logo
+{   
+   float:left;
+   width: 30%;
+}
+
+title
+{
+ 
+ color: #000000;
+ padding: 5px;
+text-align:center;
+font-weight:bold;
+font-size:40px;
+ 
+}     
+    div.menu  {
+	float: left;
+	padding:0;
+	height:80px;
+	/*margin: 0 0px;*/
+	width: 1450px;	
+     
+}
+
+div.menu  a{
+	background: url("p.png") ;  /* фон пунктов меню */
+ 
+	color: #000; /* цвет шрифта */
+	
+	float: left;
+	font: 20px/75px Impact; /* размер шрифта / высота шрифта   */
+	height:65px;
+	text-decoration: none; /* без подчеркивания */
+	text-align: center;
+	width: 320px;
+	
+	margin: 10px ; /* отступы пунктов меню */
+	text-shadow: #000 0 0 1px; /* тень у букв */
+}
+
+div.menu a:hover, div.menu a.active{
+
+	color: #fed9d9; /* цвет шрифта при наведении */
+	text-shadow: #e75454 0 0 25px; /* тень у букв при наведениии */
+}
+
+ 
+
+      p { 
+font-size:20px; 
+font-style:italic;
+align:center;
+
+ }
+ 
+ 
+
+
+ .center {
+    width: 1000px; /* Ширина элемента в пикселах */
+    padding: 10px; /* Поля вокруг текста */
+    margin: auto; /* Выравниваем по центру */
+    background: #FFFFFF; /* Цвет фона */
+    margin-left: 220px; /* Отступ слева */
+    margin-top: 100px;	/* Отступ сверху */
+   }
+   
+   
+   
+   
+
+
+      .photo  {
+	float: left;
+	padding:0;
+	width: 40%;	
+}        
+
+.description  {
+	float: left;
+	padding:0;
+	width: 50%;
+	
+
+	}
+     
+ 
+ 
+ 
+ 
+ 
+
+}  		
